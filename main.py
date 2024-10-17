@@ -3,9 +3,10 @@ import cv2
 
 app = Flask(__name__)
 
-
+# Define the IP camera stream (RTSP or HTTP URL)
+# Example: rtsp://username:password@192.168.1.100:554/stream
 #camera_url = "rtsp://Admin1:Admin1@192.168.0.187/live0"
-camera_url = "rtsp://Steve1:Steve1@86.13.176.186:2525/live1"
+camera_url = ""
 def gen_frames():
     cap = cv2.VideoCapture(camera_url)  # Open the camera feed
     while True:
